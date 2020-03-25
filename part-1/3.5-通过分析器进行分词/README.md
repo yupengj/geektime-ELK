@@ -82,11 +82,24 @@ POST _analyze
   "text": "这个苹果不大好吃"
 }
 
+POST _analyze
+{
+  "analyzer": "ik_smart",
+  "text": "他说的确实在理”"
+}
+
+
+POST _analyze
+{
+  "analyzer": "ik_max_word",
+  "text": "这个苹果不大好吃”"
+}
 ```
 
 ## 相关阅读
 - https://www.elastic.co/guide/en/elasticsearch/reference/7.1/indices-analyze.html
 - https://www.elastic.co/guide/en/elasticsearch/reference/current/analyzer-anatomy.html
 - IK 分词器,支持自定义词库，支持热更新分词字典。https://github.com/medcl/elasticsearch-analysis-ik
-    - ik分析器安装：bin/elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.1.0/elasticsearch-analysis-ik-7.1.0.zip
+    - ik分析器安装：bin/elasticsearch-plugin.bat install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v7.6.1/elasticsearch-analysis-ik-7.6.1.zip
+    - 或者下载后解压到 plugins 目录
 - THULAC 分词器,是清华大写自然语言处理和社会人文计算机实验室的一套中文分词器。https://github.com/microbun/elasticsearch-thulac-plugin
